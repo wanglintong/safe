@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <declare-styleable name="cn.com.zlqf.safe.view.SettingItemView">
+        <attr name="title" format="string"></attr>
+        <attr name="desc" format="string"></attr>
+        <attr name="on" format="string"></attr>
+        <attr name="off" format="string"></attr>
+    </declare-styleable>
+</resources>

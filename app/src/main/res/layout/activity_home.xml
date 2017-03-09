@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        style="@style/BaseTitleStyle"
+        android:text="功能列表" />
+    <cn.com.zlqf.safe.view.FocusTextView
+        android:padding="5dp"
+        android:text="滚动内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <GridView
+        android:id="@+id/gv_home"
+        android:numColumns="3"
+        android:verticalSpacing="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></GridView>
+</LinearLayout>
