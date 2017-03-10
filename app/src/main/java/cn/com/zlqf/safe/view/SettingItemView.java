@@ -15,9 +15,14 @@ import cn.com.zlqf.safe.R;
  */
 
 public class SettingItemView extends RelativeLayout{
+    private static final  String NAMESPACE = "http://schemas.android.com/apk/res/cn.com.zlqf.safe";
     private CheckBox cb_setting_item;
     private TextView tv_setting_item_title;
     private TextView getTv_setting_item_desc;
+    private String title;
+    private String off;
+    private String on;
+
     public SettingItemView(Context context) {
         this(context,null);
     }
@@ -32,18 +37,27 @@ public class SettingItemView extends RelativeLayout{
         initAttrs(attrs);
 
         View.inflate(context, R.layout.setting_item_view, this);
+        initUI();
+        initAttrs(attrs);
+        initData();
+
+    }
+
+    private void initData() {
+        tv_setting_item_title.setText(title);
+    }
+
+    private void initUI() {
         tv_setting_item_title = (TextView) this.findViewById(R.id.tv_setting_item_title);
         getTv_setting_item_desc = (TextView) this.findViewById(R.id.tv_setting_item_desc);
         cb_setting_item = (CheckBox) this.findViewById(R.id.cb_setting_item);
     }
 
     private void initAttrs(AttributeSet attrs) {
-        int attributeCount = attrs.getAttributeCount();
-        for(int i=0;i<attributeCount;++i) {
-            String attributeName = attrs.getAttributeName(i);
-            String attributeValue = attrs.getAttributeValue(i);
-            Log.e("wlt","name="+attributeName+",value="+attributeValue);
-        }
+        //取到自定义属性
+        title = attrs.getAttributeValue(NAMESPACE, "title");
+        off = attrs.getAttributeValue(NAMESPACE, "off");
+        on = attrs.getAttributeValue(NAMESPACE, "on");
     }
 
     public boolean isCheck() {
@@ -52,9 +66,9 @@ public class SettingItemView extends RelativeLayout{
     public void setCheck(boolean isCheck) {
         cb_setting_item.setChecked(isCheck);
         if(isCheck) {
-            getTv_setting_item_desc.setText("检查更新已开启");
+            getTv_setting_item_desc.setText(on);
         }else {
-            getTv_setting_item_desc.setText("检查更新已关闭");
+            getTv_setting_item_desc.setText(off);
         }
     }
 }

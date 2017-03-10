@@ -9,9 +9,18 @@
     <cn.com.zlqf.safe.view.SettingItemView
         xmlns:safe="http://schemas.android.com/apk/res/cn.com.zlqf.safe"
         safe:title="检查更新"
-        safe:on="检查更新开启"
-        safe:off="检查更新关闭"
-        android:id="@+id/siv_update"
+        safe:on="检查更新已开启"
+        safe:off="检查更新已关闭"
+        android:id="@+id/siv_update_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </cn.com.zlqf.safe.view.SettingItemView>
+    <cn.com.zlqf.safe.view.SettingItemView
+        xmlns:safe="http://schemas.android.com/apk/res/cn.com.zlqf.safe"
+        safe:title="显示电话归属地"
+        safe:on="已开启"
+        safe:off="已关闭"
+        android:id="@+id/siv_phone_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </cn.com.zlqf.safe.view.SettingItemView>

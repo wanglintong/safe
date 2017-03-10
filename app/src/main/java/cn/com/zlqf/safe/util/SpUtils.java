@@ -23,4 +23,17 @@ public class SpUtils {
         }
         return sp.getBoolean(key,defValue);
     }
+    public static void putString(Context ctx,String key,String value) {
+        if(sp == null) {
+            sp = ctx.getSharedPreferences("config", Context.MODE_PRIVATE);
+        }
+        sp.edit().putString(key,value).commit();
+    }
+
+    public static String getString(Context ctx,String key,String defValue) {
+        if(sp == null) {
+            sp = ctx.getSharedPreferences("config",Context.MODE_PRIVATE);
+        }
+        return sp.getString(key,defValue);
+    }
 }
