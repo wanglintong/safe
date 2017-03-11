@@ -4,42 +4,33 @@
     android:layout_height="match_parent">
     <TextView
         style="@style/BaseTitleStyle"
-        android:text="2.手机卡绑定"
-        />
+        android:text="3.设置安全号码"
+        ></TextView>
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor="#000"
-        android:layout_margin="5dp"
-        android:text="通过绑定sim卡:"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:gravity="center_vertical"
-        android:textColor="#000"
-        android:layout_margin="5dp"
-        android:text="下次重启手机如果发现sim卡发生变化，就会发送报警短信"
-        />
-    <cn.com.zlqf.safe.view.SettingItemView
-        xmlns:safe="http://schemas.android.com/apk/res/cn.com.zlqf.safe"
-        android:id="@+id/siv_sim_bind"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        safe:title="sim卡绑定"
-        safe:on="sim卡已绑定"
-        safe:off="sim卡未绑定"
-        >
-    </cn.com.zlqf.safe.view.SettingItemView>
+        android:text="sim卡变更后:\n报警短信会发送给安全号码"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/bt_select_number"
+        android:background="@drawable/selector_number_btn_bg"
+        android:text="联系人"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     <LinearLayout
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:background="@android:drawable/presence_offline"
+            android:background="@android:drawable/presence_invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:background="@android:drawable/presence_invisible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <ImageView
@@ -47,11 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <ImageView
-            android:background="@android:drawable/presence_offline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <ImageView
-            android:background="@android:drawable/presence_offline"
+            android:background="@android:drawable/presence_invisible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
