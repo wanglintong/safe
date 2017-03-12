@@ -95,7 +95,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private void initAnimation() {
         AlphaAnimation alphaAnimation = new AlphaAnimation(0, 1);
-        alphaAnimation.setDuration(3000);
+        alphaAnimation.setDuration(2000);
         rl_root.startAnimation(alphaAnimation);
     }
 

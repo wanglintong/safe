@@ -9,4 +9,5 @@ public class Const {
     public static final String SAFE_PHONE_PWD = "safe_phone_pwd";
     public static final String SETUP_OVER = "setup_over";
     public static final String SIM_BIND = "sim_bind";
+    public static final String SIM_NUMBER = "sim_number";
 }
